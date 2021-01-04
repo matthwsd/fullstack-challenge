@@ -1,6 +1,5 @@
 'use strict'
 
-
 /**
  * Search all values and returns the max profit that you can obtain, or not.
  * @param {number[]} prices 
@@ -35,8 +34,3 @@ const GetValueFromCmd = () => {
 
 let { PRICES } = GetValueFromCmd();
 GetMaxProfit(PRICES);
-
-module.exports = {
-   GetMaxProfit,
-   GetValueFromCmd
-}

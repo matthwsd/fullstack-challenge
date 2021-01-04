@@ -1,3 +1,4 @@
+'use strict'
 
 const GetArrayAndTargetFromCmd = () => {
     const { argv } = process;
@@ -19,10 +20,14 @@ const CheckForTargetSum = (numbers, target) => {
         })
     })
 
-    return result;
+    if (result.length) {
+        console.log(`Indexes to sum: [${result}]`);
+    } else {
+        console.log("Impossible sum");
+    }
+
 }
 
-module.exports = {
-    CheckForTargetSum,
-    GetArrayAndTargetFromCmd
-}
+const { NUMBERS, TARGET } = GetArrayAndTargetFromCmd();
+
+CheckForTargetSum(NUMBERS, TARGET);
